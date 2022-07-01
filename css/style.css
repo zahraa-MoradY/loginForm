@@ -1,0 +1,333 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(../fonts/opensans/SourceSansPro-Black.ttf) format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(../fonts/opensans/SourceSansPro-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(../fonts/opensans/SourceSansPro-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+body {
+  --brandColor: #724dff;
+  --primaryColor: #6d58ba;
+  --primaryColor2: #4285f4;
+  --primaryColor200: #f5f2ff;
+  --lightColor: #e5e7eb;
+  --lightColor2: #ecf2fc;
+  --lightFontColor: #6b7280;
+  --darkFontColor: #1f2937;
+  --whiteColor: #ffffff;
+  --placeholder: #d1d5db;
+  --errorColor: rgb(255, 0, 157);
+  font-family: "openSans";
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.lightfont {
+  color: var(--lightFontColor);
+}
+.link-fontColor {
+  color: var(--primaryColor);
+}
+.lightBackground {
+  background-color: var(--primaryColor200);
+  padding: 2px 4px;
+}
+.text-bold {
+  font-weight: bold;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.radius-4 {
+  border-radius: 4px;
+}
+/* /////////// */
+/* MAIN STYLE */
+.login__form {
+  height: 668px;
+}
+
+.login__form .container {
+  width: 80%;
+}
+
+.form__container {
+  position: relative;
+  width: 100%;
+  height: 568px;
+  flex-wrap: wrap;
+}
+
+.form__container .left__side {
+  background-color: var(--brandColor);
+  position: relative;
+  width: 35%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.form__container .left__side::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  background-color: #0000002f;
+  z-index: 2;
+}
+.form__container .left__side p {
+  padding-top: 20px;
+  color: var(--whiteColor);
+  line-height: 30px;
+}
+.form__container .left__side .left__side__container {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  z-index: 3;
+}
+.illustration {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
+  z-index: 3;
+}
+.illustration img {
+  width: 100%;
+}
+/* right side */
+.form__container .right__side {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  padding-top: 20px;
+}
+.form__container .right__side .signIn__content {
+  width: 45%;
+  /* background-color: #4285f4; */
+}
+
+.g-signin2 {
+  background-color: var(--primaryColor2);
+  width: 80%;
+  height: 54px;
+  position: relative;
+  padding: 3px;
+}
+.login__account .abcRioButtonLightBlue {
+  height: 54px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.login__account .abcRioButton {
+  box-shadow: none;
+}
+.abcRioButtonIcon {
+  background: var(--whiteColor);
+}
+/* .google__account a {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--whiteColor);
+  width: 100%;
+}
+.google__account span {
+  margin-left: 10px;
+} */
+.title {
+  margin-bottom: 25px;
+}
+.striped {
+  padding: 15px 0;
+}
+.striped p {
+  margin: 0 15px;
+  line-height: 20px;
+  color: var(--lightColor);
+}
+.line__striped {
+  flex: auto;
+  flex-basis: auto;
+  height: 1px;
+  background-color: var(--lightColor);
+  border: none;
+  outline: none;
+}
+.input__group {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin: 5px 0 12px;
+}
+.input__group img.symble {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.input__group img.icon-eye {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.input__group .login-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 48px;
+  border: none;
+  outline: none;
+}
+.input__group .login-input::placeholder {
+  color: var(--placeholder);
+  font-size: 0.9rem;
+}
+
+.input__group .login-input:focus::placeholder {
+  opacity: 0;
+}
+.input__group .login-input:focus {
+  border: 1px solid var(--primaryColor2);
+}
+
+.forget,
+.support__msg {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+.btn {
+  width: 100%;
+  margin: 12px 0;
+}
+.login__btn {
+  width: 100%;
+  height: 48px;
+  background-color: var(--brandColor);
+  border: none;
+  outline: none;
+  color: var(--whiteColor);
+  font-size: 0.9rem;
+}
+/* ///////// */
+/* responsive */
+@media screen and (max-width: 1080px) {
+  .form__container .right__side .signIn__content {
+    width: 60%;
+  }
+  .logo img {
+    width: 80%;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .form__container .right__side .signIn__content {
+    width: 80%;
+  }
+  .form__container .left__side {
+    width: 45%;
+  }
+  .form__container .right__side {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form__container .left__side,
+  .form__container .right__side {
+    width: 80%;
+  }
+  .form__container .left__side {
+    height: 120px;
+  }
+  .illustration,
+  .description {
+    display: none;
+  }
+}
+@media screen and (max-width: 540px) {
+  .login__form .container {
+    width: 100%;
+  }
+  .form__container .right__side {
+    width: 100%;
+  }
+}
+/* ///////// */
+/* loginpassword page style */
+.login-input.login-password {
+  border: 1px solid var(--lightColor);
+}
+.back_btn {
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+.login__account_password .login__btn {
+  width: 80%;
+}
+.validation_error {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+.forget.margin_top_password {
+  margin-top: 10px;
+}
+.form__field.success input {
+  border: 1px solid;
+  border-color: var(--brandColor);
+}
+.form__field.error input {
+  border: 1px solid;
+  border-color: var(--errorColor);
+}
+.validation_msg {
+  color: var(--errorColor);
+  font-size: 0.93rem;
+  margin-bottom: 5px;
+}
