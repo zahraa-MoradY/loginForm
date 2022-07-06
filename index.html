@@ -1,83 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="form,SignIn,login,html,javascript,css,resposive">
-    <meta name="description" content="فرم لاگین ریسپانسیو">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="form,SignIn,login,html,javascript,css,resposive"
+    />
+    <meta name="description" content="فرم لاگین ریسپانسیو" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="480762316721-rsmct6bl05iual0otqr3dbgfi7ttjbhj.apps.googleusercontent.com">
-    <link rel="stylesheet" href="css/style.css">
+    <meta
+      name="google-signin-client_id"
+      content="480762316721-rsmct6bl05iual0otqr3dbgfi7ttjbhj.apps.googleusercontent.com"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>SignIn form</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="login__form flex-center">
-        <div class="container">
-            <div class="form__container flex-center">
-                <div class="left__side flex-center">
-                   <div class="left__side__container">
-                        <div class="logo flex-start">
-                            <img src="img/logo.png" alt="logo">
-                        </div>
-                        
-                        <div class="description flex-center">
-                            <p>We are an experience maker , we help you to have a better experience in visual communication</p>
-                        </div>
-                        
-                   </div>
-                   <div class="illustration">
-                    <img src="img/Saly-10 1.png" alt="illustration">
-                </div>
-                </div>
-                <div class="right__side flex-center">
-                    <div class="signIn__content">
-                        <form class="signin" >
-                        <div class="title">
-                            <p class="text-bold">Sign in to Pixelonium</p>
-                            <p class="lightfont">Login by Your Secure Account</p>
-                        </div>
-                        <div class="login__account flex-between">
-                            <div class="g-signin2 radius-4" data-onsuccess="onSignIn" data-width="240" data-height="50" data-longtitle="true"></div> 
-                            <div class="facebook__account">
-                               <a href="">
-                                <img src="img/btn.png" alt="">
-                               </a>
-                            </div>
-                        </div>
-                        <div class="striped flex-center">
-                            <span class="line__striped"></span>
-                            <p>or</p>
-                            <span class="line__striped"></span>
-                        </div>
-                        <div class="input__group form__field radius-4">
-                            <img src="img/at-symbol.png" class="symble" alt="at-symbol">
-                            <input type="text" class="login-input login-input-user radius-4" placeholder="Username, Email or Phone Number" >
-                           
-                        </div>
-                        <p class="validation_msg"></p>
-                        <p class="forget lightfont">
-                            Forget password?
-                            <a href="" class="link-fontColor">Click here</a>
-                        </p>
-                        
-                            <div class="btn form__field">
-                                <button class="login__btn continue radius-4" id="userbtn" name="continueButton" type="submit" >continue</button>
+      <div class="container">
+        <div class="form__container flex-center">
+          <div class="left__side flex-center">
+            <div class="left__side__container">
+              <div class="logo flex-start">
+                <img src="img/logo.png" alt="logo" />
+              </div>
 
-                            </div>
-                        <p class="support__msg">
-                            Questions? Email us at 
-                            <a href="" class="link-fontColor"> support@pixelonium.com</a>
-                        </p>
-                        </form>
-                    </div>
-                </div>
+              <div class="description flex-center">
+                <p>
+                  We are an experience maker , we help you to have a better
+                  experience in visual communication
+                </p>
+              </div>
             </div>
+            <div class="illustration">
+              <img src="img/Saly-10 1.png" alt="illustration" />
+            </div>
+          </div>
+          <div class="right__side flex-center">
+            <div class="signIn__content">
+              <form class="signin">
+                <div class="title">
+                  <p class="text-bold">Sign in to Pixelonium</p>
+                  <p class="lightfont">Login by Your Secure Account</p>
+                </div>
+                <div class="login__account flex-between">
+                  <div
+                    class="g-signin2 radius-4"
+                    data-onsuccess="onSignIn"
+                    data-width="240"
+                    data-height="50"
+                    data-longtitle="true"
+                  ></div>
+                  <div class="facebook__account">
+                    <a href="">
+                      <img src="img/btn.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="striped flex-center">
+                  <span class="line__striped"></span>
+                  <p>or</p>
+                  <span class="line__striped"></span>
+                </div>
+                <div class="input__group form__field radius-4">
+                  <img src="img/at-symbol.png" class="symble" alt="at-symbol" />
+                  <input
+                    type="text"
+                    class="login-input login-input-user radius-4"
+                    placeholder="Username, Email or Phone Number"
+                  />
+                </div>
+                <p class="validation_msg"></p>
+                <p class="forget lightfont">
+                  Forget password?
+                  <a href="forgotPassword.html" class="link-fontColor"
+                    >Click here</a
+                  >
+                </p>
+
+                <div class="btn form__field">
+                  <button
+                    class="login__btn continue radius-4"
+                    id="userbtn"
+                    name="continueButton"
+                    type="submit"
+                  >
+                    continue
+                  </button>
+                </div>
+                <p class="support__msg">
+                  Questions? Email us at
+                  <a href="" class="link-fontColor"> support@pixelonium.com</a>
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

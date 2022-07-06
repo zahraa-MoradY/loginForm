@@ -6,9 +6,16 @@ const ValiatinErrorMsg = document.querySelector(".validation_msg");
 const confirmBtns = document.querySelector(".login__btn");
 const form = document.querySelector(".signin");
 const formPassword = document.querySelector(".signin_password");
+const formForgetPassword = document.querySelector(".forgetPassword");
 const btnname = document.querySelector("user");
 // //////
-
+const forgetpassbtn = document.getElementById("forgetpassbtn");
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector(".modal");
+const closemodal = document.querySelector(".close-modal");
+//
+// ///////
+// validation of username & password
 const checkUsername = () => {
   let valid = false;
   const min = 3,
@@ -79,7 +86,14 @@ const showSuccess = function (input) {
   formField.classList.add("success");
   ValiatinErrorMsg.textContent = "";
 };
-
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
 const buttonevents = function () {
   if (confirmBtns.name === "continueButton") {
     form.addEventListener("submit", function (e) {
@@ -97,9 +111,32 @@ const buttonevents = function () {
         e.preventDefault();
       }
     });
+  } else if (confirmBtns.name === "forget") {
+    forgetpassbtn.addEventListener("click", function (e) {
+      if (checkUsername()) {
+        e.preventDefault();
+        openModal();
+        closemodal.addEventListener("click", closeModal);
+      } else {
+        e.preventDefault();
+      }
+    });
   }
 };
 buttonevents();
+
+// back link button to previous page
+const backlinkEvent = function () {
+  const backLinkEl = document.querySelector(".back__link");
+  backLinkEl.setAttribute("href", document.referrer);
+  backLinkEl.parentElement.onclick = function () {
+    history.back();
+    return false;
+  };
+};
+backlinkEvent();
+
+// password visibility
 visibilityIcon.addEventListener("click", function () {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
